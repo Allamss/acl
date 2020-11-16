@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+mvnw.cmd
+mvnw
+*.yml
+*.properties
+*.yaml
+/.mvn/
