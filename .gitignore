@@ -38,3 +38,4 @@ mvnw
 *.properties
 *.yaml
 /.mvn/
+/lib/
