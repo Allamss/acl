@@ -19,7 +19,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.net.PasswordAuthentication;
 import java.util.ArrayList;
 
 public class TokenLoginFilter extends UsernamePasswordAuthenticationFilter {
@@ -28,8 +27,8 @@ public class TokenLoginFilter extends UsernamePasswordAuthenticationFilter {
     private RedisTemplate redisTemplate;
     private AuthenticationManager authenticationManager;
 
-    public TokenLoginFilter(TokenManager tokenManager, RedisTemplate redisTemplate,
-                            AuthenticationManager authenticationManager) {
+    public TokenLoginFilter(AuthenticationManager authenticationManager, TokenManager tokenManager,
+                            RedisTemplate redisTemplate) {
         this.tokenManager = tokenManager;
         this.redisTemplate = redisTemplate;
         this.authenticationManager = authenticationManager;

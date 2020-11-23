@@ -3,12 +3,15 @@ package cn.allams.security.security;
 import cn.allams.utils.utils.MD5;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-public class DefalutPasswordDecoder implements PasswordEncoder {
-    public DefalutPasswordDecoder() {
+/**
+ * @author Some1Ls
+ */
+public class DefalutPasswordEncoder implements PasswordEncoder {
+    public DefalutPasswordEncoder() {
         this(-1);
     }
 
-    public DefalutPasswordDecoder(int strength) {
+    public DefalutPasswordEncoder(int strength) {
 
     }
     /**
