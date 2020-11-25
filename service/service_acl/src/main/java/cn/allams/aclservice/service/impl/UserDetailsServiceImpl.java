@@ -34,6 +34,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         //根据用户查询用户权限列表
         List<String> permissionValueList = permissionService.selectPermissionValueByUserId(user.getId());
         SecurityUser securityUser = new SecurityUser();
+        securityUser.setCurrentUserInfo(curUser);
         securityUser.setPermissionValueList(permissionValueList);
         return securityUser;
     }
